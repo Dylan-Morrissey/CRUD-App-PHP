@@ -18,9 +18,8 @@ $users = getUsers();
     <table class="table">
       <thead>
         <tr>
-          <th scope="col"> Name </th>
+          <th scope="col">Name </th>
           <th scope="col">Username </th>
-          <th scope="col">Actions</th>
           <th scope="col">Email address </th>
           <th scope="col">Phone Number </th>
           <th scope="col">Website</th>
@@ -46,6 +45,9 @@ $users = getUsers();
       <?php endforeach; ?>
       </tbody>
     </table>
+      <div class="col text-center">
+        <a href="create.php"><button type="button" name="button" class="btn btn-info">Create User</button></a>
+      </div>
   </body>
 
   <footer>

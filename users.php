@@ -19,6 +19,11 @@ function getUserById($id)
 
 function createUser($newUserData)
 {
+  $users = getUsers();
+  $lastUser = end($users);
+  $newUserData['id'] =  $lastUser['id'] + 1;
+  $users += $arrayName = array($newUserData);
+  file_put_contents('users.json', json_encode($users));
 
 }
 
