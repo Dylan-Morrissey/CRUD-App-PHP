@@ -15,7 +15,7 @@ $users = getUsers();
   </header>
 
   <body>
-    <table class="table table-dark">
+    <table class="table">
       <thead>
         <tr>
           <th scope="col"> Name </th>
@@ -34,11 +34,13 @@ $users = getUsers();
           <td><?php echo $user['username']; ?></td>
           <td><?php echo $user['email']; ?></td>
           <td><?php echo $user['phone']; ?></td>
-          <td><?php echo $user['website']; ?></td>
+          <td>
+            <a href="http://<?php echo $user['website']; ?>" target="_blank"><?php echo $user['website']; ?></a>
+          </td>
           <td>
             <a href="view.php?id=<?php echo $user['id'] ?>" class="btn btn-info">View</a>
-            <a href="update.php=<?php echo $user['id'] ?>" class="btn btn-secondary">Update</a>
-            <a href="delete.php=<?php echo $user['id'] ?>" class="btn btn-danger">Delete</a>
+            <a href="update.php?id=<?php echo $user['id'] ?>" class="btn btn-secondary">Update</a>
+            <a href="delete.php?id=<?php echo $user['id'] ?>" class="btn btn-danger">Delete</a>
           </td>
         </tr>
       <?php endforeach; ?>
